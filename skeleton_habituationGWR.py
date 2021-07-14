@@ -22,7 +22,7 @@ stv = 4
 pls = [0, 0, 1, 0, 0]
 
 # TODO: then create a list of 6 pulses, called x, to use for input
-x = pls * 79
+x = pls * 6
 
 v = stv  # Set connection weight to start weight value
 
@@ -41,7 +41,7 @@ y = np.zeros((1, nTs))  # set up (define) a vector for the output time series
 for t in range(0, nTs):
     y[0, t] = v * x[t]
     if x[t] > 0:
-        v = v*0.7
+        v = v*.7
 
 
 
